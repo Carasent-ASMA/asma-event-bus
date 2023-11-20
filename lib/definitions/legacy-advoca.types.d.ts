@@ -1,5 +1,10 @@
+import { ISmsNotificationRecipient } from './artifact.types';
 export interface ILegacyPortalEventBus {
     template_id: number;
-    invitation_code: string;
+    sms_notification_recipients: ISmsNotificationRecipient[];
+    sms_keyword_replacements: {
+        key: string;
+        value: string;
+    }[];
 }
 //# sourceMappingURL=legacy-advoca.types.d.ts.map
