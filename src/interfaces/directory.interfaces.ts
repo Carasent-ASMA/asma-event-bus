@@ -3,10 +3,10 @@ export interface IPatientBasicData {
      * @id is user directory_uuid or users directory_id
      */
     id: string
+    activity_id: string
     name: string
 }
 export interface IUsersForOrders extends IPatientBasicData {
-    activity_id: string
     directory_uuid: string
 }
 
