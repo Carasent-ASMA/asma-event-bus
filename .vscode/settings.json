@@ -1,7 +1,7 @@
 {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     },
     "editor.wordWrap": "on",
     // let editor format using prettier for all other files
@@ -24,7 +24,12 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "eslint.validate": ["javascript", "javascriptreact", "html", "typescriptreact"],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        "typescriptreact"
+    ],
     "typescript.referencesCodeLens.enabled": true,
     "javascript.referencesCodeLens.enabled": true,
     "editor.quickSuggestions": {
@@ -36,5 +41,11 @@
     "scss.validate": false, // Disable scss lint (optional if using scss)
     "explorer.decorations.badges": true,
     "explorer.decorations.colors": true,
-    "cSpell.words": ["actno", "asma", "deepcode",  "qnrs", "soknad"]
+    "cSpell.words": [
+        "actno",
+        "asma",
+        "deepcode",
+        "qnrs",
+        "soknad"
+    ]
 }

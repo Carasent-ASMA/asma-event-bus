@@ -49,8 +49,8 @@ export declare const directoryEventBuss: {
     };
 };
 export declare const oaDirectoryEventBuss: {
-    dispatch: <Key extends "selected_users">(event: Key, arg: IAoAppDirectoryEventBus[Key], shouldPersist?: boolean) => void;
-    register: <Key_1 extends "selected_users">(event: Key_1, callback: (val: IAoAppDirectoryEventBus[Key_1]) => void) => {
+    dispatch: <Key extends keyof IAoAppDirectoryEventBus>(event: Key, arg: IAoAppDirectoryEventBus[Key], shouldPersist?: boolean) => void;
+    register: <Key_1 extends keyof IAoAppDirectoryEventBus>(event: Key_1, callback: (val: IAoAppDirectoryEventBus[Key_1]) => void) => {
         unregister: () => void;
     };
 };
