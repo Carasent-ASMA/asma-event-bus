@@ -12,4 +12,11 @@ export interface INavigationEventBus {
         onConfirm?: () => void
         onCancel?: () => void
     }
+    on_trigger_snackbar: {
+        message: string
+        linkContent?: string
+        linkText?: string
+        hasButton?: boolean
+        hasCloseButton?: boolean
+    }
 }
