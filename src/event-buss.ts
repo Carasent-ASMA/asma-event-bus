@@ -13,6 +13,7 @@ type EventBusNamesEnum =
     | 'asma-overrides'
     | 'app-navigation'
     | 'legacy-portal'
+    | 'app-crm'
 
 type fn = <T>(arg: T) => void
 
