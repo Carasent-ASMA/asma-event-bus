@@ -9,6 +9,7 @@ export interface INavigationEventBus {
         history?: typeof history;
         onConfirm?: () => void;
         onCancel?: () => void;
+        onDelete?: () => void;
     };
     on_trigger_snackbar: {
         message: string;
