@@ -10,6 +10,7 @@ import type { INotificationEventBus } from './definitions/notification.types';
 import type { ITasksEventBus } from './definitions/tasks.types';
 import type { INavigationEventBus } from './definitions/navigation.types';
 import { ILegacyPortalEventBus } from './definitions/legacy-advoca.types';
+import { ICrmEventBus } from './definitions/crm.types';
 export * from './definitions/artifact.types';
 export * from './definitions/directory.types';
 export declare const chatEventBuss: {
@@ -81,6 +82,12 @@ export declare const navigationEventBus: {
 export declare const legacyPortalEventBus: {
     dispatch: <Key extends keyof ILegacyPortalEventBus>(event: Key, arg: ILegacyPortalEventBus[Key], shouldPersist?: boolean) => void;
     register: <Key_1 extends keyof ILegacyPortalEventBus>(event: Key_1, callback: (val: ILegacyPortalEventBus[Key_1]) => void) => {
+        unregister: () => void;
+    };
+};
+export declare const crmEventBus: {
+    dispatch: <Key extends "time_tracking_dialog">(event: Key, arg: ICrmEventBus[Key], shouldPersist?: boolean) => void;
+    register: <Key_1 extends "time_tracking_dialog">(event: Key_1, callback: (val: ICrmEventBus[Key_1]) => void) => {
         unregister: () => void;
     };
 };
