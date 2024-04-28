@@ -1,4 +1,4 @@
-import { history } from 'asma-helpers';
+import type { History } from 'history';
 export interface INavigationEventBus {
     on_navigation: {
         path: string;
@@ -6,7 +6,7 @@ export interface INavigationEventBus {
     on_trigger_prompt: {
         showPrompt: boolean;
         message: string;
-        history?: typeof history;
+        history?: History;
         onConfirm?: () => void;
         onCancel?: () => void;
         onDelete?: () => void;
