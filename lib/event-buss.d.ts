@@ -11,6 +11,11 @@ declare global {
         }>;
     }
 }
+declare global {
+    interface Window {
+        rawWindow?: typeof window;
+    }
+}
 export declare function EventBus<E>(name: EventBusNamesEnum, local_idx?: number): {
     dispatch: <Key extends keyof E>(event: Key, arg: E[Key], shouldPersist?: boolean) => void;
     register: <Key_1 extends keyof E>(event: Key_1, callback: (val: E[Key_1]) => void) => {

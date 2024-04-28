@@ -35,10 +35,18 @@ declare global {
 
 const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
 
+declare global {
+    interface Window {
+        rawWindow?: typeof window
+    }
+}
+
+const realWindow = window.rawWindow || window
+
 export function EventBus<E>(name: EventBusNamesEnum, local_idx?: number) {
     const name_idx = local_idx ? `${name}-${local_idx}` : name
-    if (window.ASMA_EVENT_BUS?.[name_idx]) {
-        return window.ASMA_EVENT_BUS[name_idx] as {
+    if (realWindow.ASMA_EVENT_BUS?.[name_idx]) {
+        return realWindow.ASMA_EVENT_BUS[name_idx] as {
             dispatch: typeof dispatch
             register: typeof register
         }
@@ -106,11 +114,11 @@ export function EventBus<E>(name: EventBusNamesEnum, local_idx?: number) {
         register,
     }
 
-    if (!window.ASMA_EVENT_BUS) {
-        window.ASMA_EVENT_BUS = {}
+    if (!realWindow.ASMA_EVENT_BUS) {
+        realWindow.ASMA_EVENT_BUS = {}
     }
 
-    window.ASMA_EVENT_BUS[name_idx] = fns
+    realWindow.ASMA_EVENT_BUS[name_idx] = fns
 
     return fns
 }
