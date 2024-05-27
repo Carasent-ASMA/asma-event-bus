@@ -7,6 +7,7 @@ export interface ISelectedChatDocument {
     data: {
         title: string;
         extension: string;
+        forSign?: boolean;
     };
 }
 export interface IOpenDocumentChatPopUp {
