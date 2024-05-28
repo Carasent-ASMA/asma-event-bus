@@ -6,7 +6,7 @@ export interface ICalendarEventBus {
     delete_qnr_task_relation: {
         filter_id: string;
     };
-    on_create_task: true;
-    on_create_event: true;
+    on_mutate_task: true;
+    on_mutate_event: true;
 }
 //# sourceMappingURL=calendar.types.d.ts.map
