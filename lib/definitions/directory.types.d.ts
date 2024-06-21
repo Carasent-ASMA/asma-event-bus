@@ -1,4 +1,4 @@
-import type { IPatientFullData, IUsersForOrders } from '../interfaces/directory.interfaces';
+import { IPatientFullData, IUserConsultants, IUsersForOrders } from '../interfaces/directory.interfaces';
 export interface IDirectoryEventBus {
     users: IPatientFullData[];
     selected_users: IPatientFullData[];
@@ -7,5 +7,6 @@ export interface IDirectoryEventBus {
     users_for_orders: IUsersForOrders[];
     group_to_send: string;
     on_group_link_click: {};
+    selected_consultants: IUserConsultants[];
 }
 //# sourceMappingURL=directory.types.d.ts.map
