@@ -16,6 +16,10 @@ export interface IOpenDocumentChatPopUp {
 export interface IChatEventBus {
     on_select_document: ISelectedTicket;
     on_select_chat_document: ISelectedChatDocument | ISelectedChatDocument[];
+    on_select_new_chat_document: {
+        documents: ISelectedChatDocument | ISelectedChatDocument[];
+        source: 'mfe' | 'chat';
+    };
     on_document_chat_popup: IOpenDocumentChatPopUp;
     on_open_chat: {};
     test: string;
