@@ -1,11 +1,11 @@
-import { IPatientFullData, IUserConsultants, IUsersForOrders } from '../interfaces/directory.interfaces'
+import { IErrorState, IPatientFullData, IUserConsultants, IUsersForOrders } from '../interfaces/directory.interfaces'
 
 export interface IDirectoryEventBus {
     users: IPatientFullData[]
     selected_users: IPatientFullData[]
     request_for_users: {}
     request_for_selected_users: {}
-    users_for_orders: IUsersForOrders[]
+    users_for_orders: [error: IErrorState | null, data: IUsersForOrders[] | null]
     group_to_send: string
     on_group_link_click: {}
     selected_consultants: IUserConsultants[]
