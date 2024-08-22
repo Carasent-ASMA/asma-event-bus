@@ -17,4 +17,7 @@ export interface IPatientFullData extends IPatientBasicData {
     actno: string;
     activity_ids: string[];
 }
+export interface IErrorState {
+    message: string;
+}
 //# sourceMappingURL=directory.interfaces.d.ts.map
