@@ -9,4 +9,5 @@ export interface IDirectoryEventBus {
     group_to_send: string
     on_group_link_click: {}
     selected_consultants: IUserConsultants[]
+    selected_task_consultant_id?: string
 }
