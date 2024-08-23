@@ -21,5 +21,5 @@ export interface IPatientFullData extends IPatientBasicData {
 }
 
 export interface IErrorState {
-    message: string
+    show_error: boolean
 }
