@@ -8,5 +8,6 @@ export interface ICalendarEventBus {
     };
     on_mutate_task: true;
     on_mutate_event: true;
+    selected_task_consultant_id?: string;
 }
 //# sourceMappingURL=calendar.types.d.ts.map

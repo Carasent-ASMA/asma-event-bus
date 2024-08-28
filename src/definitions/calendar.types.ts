@@ -6,4 +6,5 @@ export interface ICalendarEventBus {
     delete_qnr_task_relation: { filter_id: string }
     on_mutate_task: true
     on_mutate_event: true
+    selected_task_consultant_id?: string
 }
