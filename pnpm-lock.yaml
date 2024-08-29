@@ -1,47 +1,56 @@
-lockfileVersion: '6.0'
+lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  asma-types:
-    specifier: ^2.0.5
-    version: 2.0.5
+importers:
 
-devDependencies:
-  history:
-    specifier: ^5.3.0
-    version: 5.3.0
-  typescript:
-    specifier: ^5.4.5
-    version: 5.4.5
+  .:
+    dependencies:
+      asma-types:
+        specifier: ^2.0.5
+        version: 2.0.5
+    devDependencies:
+      history:
+        specifier: ^5.3.0
+        version: 5.3.0
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
 
 packages:
 
-  /@babel/runtime@7.24.4:
+  '@babel/runtime@7.24.4':
     resolution: {integrity: sha512-dkxf7+hn8mFBwKjs9bvBlArzLVxVbS8usaPUDd5p2a9JCL9tB8OaOVN1isD4+Xyk4ns89/xeOmbQvgdK7IIVdA==}
     engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.14.1
-    dev: true
 
-  /asma-types@2.0.5:
+  asma-types@2.0.5:
     resolution: {integrity: sha512-OzgzWwaZhZSOhPqgdWkFomh62w+zdPv3R1Yn3KwcExZpoH61BVQTffbG9EiyRYhJQlukGbpunxVLBAMEqxxy/g==}
-    dev: false
 
-  /history@5.3.0:
+  history@5.3.0:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
-    dependencies:
-      '@babel/runtime': 7.24.4
-    dev: true
 
-  /regenerator-runtime@0.14.1:
+  regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
-    dev: true
 
-  /typescript@5.4.5:
+  typescript@5.4.5:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
+
+snapshots:
+
+  '@babel/runtime@7.24.4':
+    dependencies:
+      regenerator-runtime: 0.14.1
+
+  asma-types@2.0.5: {}
+
+  history@5.3.0:
+    dependencies:
+      '@babel/runtime': 7.24.4
+
+  regenerator-runtime@0.14.1: {}
+
+  typescript@5.4.5: {}

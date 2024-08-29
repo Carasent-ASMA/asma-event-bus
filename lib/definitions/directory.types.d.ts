@@ -11,5 +11,6 @@ export interface IDirectoryEventBus {
     on_group_link_click: {};
     selected_consultants: IUserConsultants[];
     selected_task_consultant_id?: string;
+    open_overview_popup: boolean;
 }
 //# sourceMappingURL=directory.types.d.ts.map
