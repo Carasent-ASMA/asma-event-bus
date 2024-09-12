@@ -45,6 +45,6 @@ export interface ISmsNotificationRecipient {
     user_id: string;
     subject_id: string;
     sendSms?: boolean;
-    template_id: string;
+    template_id?: string;
 }
 //# sourceMappingURL=artifact.types.d.ts.map
