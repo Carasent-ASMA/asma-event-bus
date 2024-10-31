@@ -35,14 +35,15 @@ export interface IArtifactEventBus {
         value: string;
     }[];
     /**
-     * @param template_ids - ids of templates to create questionnaire
-     * @param proxy_ids - ids of proxies to create questionnaire
-     * @example { template_ids: ['1', '2'], proxy_ids: ['1', '2'] }
-     * @summary Create questionnaire from templates and proxies as example could be used in event creation
+     * @param template_ids_responsible - ids of templates to create questionnaire for the responsible (adopus side)
+     * @param template_ids_participant - ids of templates to create questionnaire for the responsible (advoca side)
+     * @example { template_ids_responsible: ['1', '2'], template_ids_participant: ['1', '2'], callBack: (responsible_qnr_ids, participant_qnr_ids) => void }
+     * @summary Create questionnaire from templates and return ids of created questionnaires
      */
     create_questionnaire: {
-        template_ids: string[];
-        proxy_ids: string[];
+        template_ids_responsible: string[];
+        template_ids_participant: string[];
+        callBack: (responsible_qnr_ids: string[], participant_qnr_ids: string[]) => void;
     };
 }
 export interface IModeratorArtifactBasicData {
