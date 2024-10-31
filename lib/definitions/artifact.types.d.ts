@@ -34,6 +34,16 @@ export interface IArtifactEventBus {
         key: string;
         value: string;
     }[];
+    /**
+     * @param template_ids - ids of templates to create questionnaire
+     * @param proxy_ids - ids of proxies to create questionnaire
+     * @example { template_ids: ['1', '2'], proxy_ids: ['1', '2'] }
+     * @summary Create questionnaire from templates and proxies as example could be used in event creation
+     */
+    create_questionnaire: {
+        template_ids: string[];
+        proxy_ids: string[];
+    };
 }
 export interface IModeratorArtifactBasicData {
     type: ArtifactPresenterTypes;
