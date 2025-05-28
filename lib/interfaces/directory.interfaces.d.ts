@@ -9,6 +9,7 @@ export interface IPatientBasicData {
 }
 export interface IUsersForOrders extends IPatientBasicData {
     directory_uuid: string;
+    group_id?: string;
 }
 export interface IUserConsultants extends Pick<IUsersForOrders, 'id' | 'name' | 'role'> {
     actno: string;
