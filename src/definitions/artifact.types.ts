@@ -13,7 +13,21 @@ export interface IArtifactOnSelect {
     type: 'qnr' | 'doc' | 'parcel'
 }
 
+export type IEventUser = { id: string; activity_id: string; name: string; actno?: string; national_id?: string }
+
+export type AttachEventQnrsParam = {
+    event_id: string
+    start_date: Date
+    end_date: Date
+    sharing_name: string
+    attendees: IEventUser[]
+    organizers: IEventUser[]
+    attendee_template_uuids: string[]
+    organizer_template_uuids: string[]
+}
+
 export interface IArtifactEventBus {
+    on_sync_events: AttachEventQnrsParam[]
     on_select_documents: IOnSelectDocument[]
     moderator_artifact_basic_data: IModeratorArtifactBasicData[]
     on_open_plans: {}
@@ -42,11 +56,10 @@ export interface IArtifactEventBus {
      * @summary Create questionnaire from templates and return ids of created questionnaires
      */
     create_questionnaire: {
-        template_ids_responsible: string[],
-        template_ids_participant: string[],
+        template_ids_responsible: string[]
+        template_ids_participant: string[]
         callBack: (responsible_qnr_ids: string[], participant_qnr_ids: string[]) => void
     }
-
 }
 
 export interface IModeratorArtifactBasicData {
