@@ -1,27 +1,39 @@
 {
-    "name": "asma-event-bus",
-    "version": "0.7.26",
-    "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.",
-    "main": "lib/index.js",
-    "types": "lib",
-    "type": "module",
-    "scripts": {
-        "build": "npx tsc && npx tsc -p .",
-        "build:pub:patch": "yarn build && yarn publish --patch",
-        "build:pub:min": "yarn build && yarn publish --minor"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://avanssoma@dev.azure.com/avanssoma/Arbeidoginkludering/_git/asma-event-bus"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "MIT",
-    "devDependencies": {
-        "history": "^5.3.0",
-        "typescript": "^5.4.5"
-    },
-    "dependencies": {
-        "asma-types": "^2.0.5"
+  "name": "asma-event-bus",
+  "version": "0.7.27",
+  "description": "TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.",
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "types": "lib",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts"
     }
+  },
+  "type": "module",
+  "scripts": {
+    "build": "rm -rf lib/** && pnpm lint:check && npx tsc -p .",
+    "build:pub:patch": "yarn build && yarn publish --patch",
+    "build:pub:min": "yarn build && yarn publish --minor",
+    "lint:fix": "pnpm exec biome lint --write",
+    "lint:check": "pnpm exec biome check --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://avanssoma@dev.azure.com/avanssoma/Arbeidoginkludering/_git/asma-event-bus"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "2.0.4",
+    "history": "^5.3.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "asma-types": "^2.0.54"
+  }
 }

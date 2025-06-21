@@ -1,4 +1,4 @@
-import { ISmsNotificationRecipient } from './artifact.types';
+import type { ISmsNotificationRecipient } from './artifact.types.js';
 export interface ILegacyPortalEventBus {
     template_id: number;
     sms_notification_recipients: ISmsNotificationRecipient[];

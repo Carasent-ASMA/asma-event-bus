@@ -1,4 +1,9 @@
-import { IErrorState, IPatientFullData, IUserConsultants, IUsersForOrders } from '../interfaces/directory.interfaces'
+import type {
+    IErrorState,
+    IPatientFullData,
+    IUserConsultants,
+    IUsersForOrders,
+} from '../interfaces/directory.interfaces.js'
 
 export interface IDirectoryEventBus {
     users: IPatientFullData[]

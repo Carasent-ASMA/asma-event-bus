@@ -1,4 +1,4 @@
-import type { IPatientFullData } from '../interfaces/directory.interfaces';
+import type { IPatientFullData } from '../interfaces/directory.interfaces.js';
 export interface IAoAppDirectoryEventBus {
     selected_users: IPatientFullData[];
     insert_time_tracking_entry: () => void;

@@ -1,4 +1,4 @@
-import type { ArtifactPresenterTypes } from 'asma-types/lib'
+import type { ArtifactPresenterTypes } from 'asma-types'
 
 export interface IOnSelectDocument {
     id: string
@@ -13,7 +13,13 @@ export interface IArtifactOnSelect {
     type: 'qnr' | 'doc' | 'parcel'
 }
 
-export type IEventUser = { id: string; activity_id: string; name: string; actno?: string; national_id?: string }
+export type IEventUser = {
+    id: string
+    activity_id: string
+    name: string
+    actno?: string
+    national_id?: string
+}
 
 export type AttachEventQnrsParam = {
     event_id: string

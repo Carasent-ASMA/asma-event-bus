@@ -19,7 +19,7 @@ export interface INavigationEventBus {
         hasButton?: boolean
         hasCloseButton?: boolean
     }
-    
+
     app_shell_mobile_menu: {
         isOpen: boolean
     }
