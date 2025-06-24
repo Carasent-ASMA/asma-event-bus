@@ -23,4 +23,5 @@ export interface INavigationEventBus {
     app_shell_mobile_menu: {
         isOpen: boolean
     }
+    on_set_page_title: string
 }
