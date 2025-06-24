@@ -16,6 +16,7 @@ import { EventBus } from './event-buss.js'
 export * from './definitions/artifact.types.js'
 export * from './definitions/directory.types.js'
 export * from './event-buss.js'
+export * from './interfaces/directory.interfaces.js'
 
 export const chatEventBuss = EventBus<IChatEventBus>('app-chat')
 

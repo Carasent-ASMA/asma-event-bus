@@ -14,6 +14,7 @@ import type { ITasksEventBus } from './definitions/tasks.types.js';
 export * from './definitions/artifact.types.js';
 export * from './definitions/directory.types.js';
 export * from './event-buss.js';
+export * from './interfaces/directory.interfaces.js';
 export declare const chatEventBuss: {
     dispatch: <Key extends keyof IChatEventBus>(event: Key, arg: IChatEventBus[Key], shouldPersist?: boolean) => void;
     register: <Key extends keyof IChatEventBus>(event: Key, callback: (val: IChatEventBus[Key]) => void) => {
