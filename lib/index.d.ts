@@ -12,6 +12,7 @@ import type { INavigationEventBus } from './definitions/navigation.types.js';
 import type { INotificationEventBus } from './definitions/notification.types.js';
 import type { ITasksEventBus } from './definitions/tasks.types.js';
 export * from './definitions/artifact.types.js';
+export * from './definitions/chat.types.js';
 export * from './definitions/directory.types.js';
 export * from './event-buss.js';
 export * from './interfaces/directory.interfaces.js';
