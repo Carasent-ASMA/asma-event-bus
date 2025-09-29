@@ -3,4 +3,7 @@ export interface ICrmEventBus {
         id?: number
         variant: 'create' | 'edit' | 'readonly'
     }
+    nav_office_update: {
+        refresh: boolean
+    }
 }

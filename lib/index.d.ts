@@ -89,8 +89,8 @@ export declare const legacyPortalEventBus: {
     };
 };
 export declare const crmEventBus: {
-    dispatch: <Key extends "time_tracking_dialog">(event: Key, arg: ICrmEventBus[Key], shouldPersist?: boolean) => void;
-    register: <Key extends "time_tracking_dialog">(event: Key, callback: (val: ICrmEventBus[Key]) => void) => {
+    dispatch: <Key extends keyof ICrmEventBus>(event: Key, arg: ICrmEventBus[Key], shouldPersist?: boolean) => void;
+    register: <Key extends keyof ICrmEventBus>(event: Key, callback: (val: ICrmEventBus[Key]) => void) => {
         unregister: () => void;
     };
 };
