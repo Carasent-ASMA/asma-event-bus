@@ -1,1 +1,1 @@
-{"version":3,"file":"crm.types.d.ts","sourceRoot":"","sources":["../../src/definitions/crm.types.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,YAAY;IACzB,oBAAoB,EAAE;QAClB,EAAE,CAAC,EAAE,MAAM,CAAA;QACX,OAAO,EAAE,QAAQ,GAAG,MAAM,GAAG,UAAU,CAAA;KAC1C,CAAA;CACJ"}
+{"version":3,"file":"crm.types.d.ts","sourceRoot":"","sources":["../../src/definitions/crm.types.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,YAAY;IACzB,oBAAoB,EAAE;QAClB,EAAE,CAAC,EAAE,MAAM,CAAA;QACX,OAAO,EAAE,QAAQ,GAAG,MAAM,GAAG,UAAU,CAAA;KAC1C,CAAA;IACD,iBAAiB,EAAE;QACf,OAAO,EAAE,OAAO,CAAA;KACnB,CAAA;CACJ"}
