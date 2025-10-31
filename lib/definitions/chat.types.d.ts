@@ -1,3 +1,4 @@
+import type { UploadSource } from 'asma-types';
 export interface ISelectedTicket {
     id: string;
     title: string;
@@ -8,6 +9,7 @@ export interface ISelectedChatDocument {
         title: string;
         extension: string;
         forSign?: boolean;
+        docId?: string;
     };
 }
 export interface IOpenDocumentChatPopUp {
@@ -19,6 +21,7 @@ export interface IChatEventBus {
     on_select_new_chat_document: {
         documents: ISelectedChatDocument | ISelectedChatDocument[];
         source: 'dialog' | 'body';
+        upload_source?: UploadSource;
     };
     on_document_chat_popup: IOpenDocumentChatPopUp;
     on_open_chat: {};
