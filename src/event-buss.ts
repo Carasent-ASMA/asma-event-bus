@@ -14,6 +14,7 @@ type EventBusNamesEnum =
     | 'app-navigation'
     | 'legacy-portal'
     | 'app-crm'
+    | 'app-storage'
 
 type fn = <T>(arg: T) => void
 
