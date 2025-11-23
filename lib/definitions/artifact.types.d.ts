@@ -63,6 +63,15 @@ export interface IArtifactEventBus {
         template_ids_participant: string[];
         callBack: (responsible_qnr_ids: string[], participant_qnr_ids: string[]) => void;
     };
+    on_select_post_journal_documents: {
+        file: File;
+        data: {
+            title: string;
+            extension: string;
+            forSign?: boolean;
+            docId?: string;
+        };
+    };
 }
 export interface IModeratorArtifactBasicData {
     type: ArtifactPresenterTypes;
