@@ -1,4 +1,4 @@
-import type { ArtifactPresenterTypes } from 'asma-types';
+import type { ArtifactPresenterTypes } from "asma-types";
 export interface IOnSelectDocument {
     id: string;
     name: string;
@@ -8,7 +8,7 @@ export interface IOnSelectDocument {
 }
 export interface IArtifactOnSelect {
     id: string;
-    type: 'qnr' | 'doc' | 'parcel';
+    type: "qnr" | "doc" | "parcel";
 }
 export type IEventUser = {
     id: string;
@@ -72,6 +72,7 @@ export interface IArtifactEventBus {
             docId?: string;
         };
     };
+    on_mutate_help_link: true;
 }
 export interface IModeratorArtifactBasicData {
     type: ArtifactPresenterTypes;
