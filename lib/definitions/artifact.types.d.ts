@@ -71,7 +71,7 @@ export interface IArtifactEventBus {
             forSign?: boolean;
             docId?: string;
         };
-    };
+    }[];
     on_mutate_help_link: true;
 }
 export interface IModeratorArtifactBasicData {
