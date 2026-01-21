@@ -15,6 +15,7 @@ type EventBusNamesEnum =
     | 'legacy-portal'
     | 'app-crm'
     | 'app-storage'
+    | 'app-qnreditor'
 
 type fn = <T>(arg: T) => void
 
