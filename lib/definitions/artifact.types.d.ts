@@ -73,6 +73,10 @@ export interface IArtifactEventBus {
         };
     }[];
     on_mutate_help_link: true;
+    on_select_qnrs_for_attach: {
+        id: string;
+        title: string;
+    }[];
 }
 export interface IModeratorArtifactBasicData {
     type: ArtifactPresenterTypes;
