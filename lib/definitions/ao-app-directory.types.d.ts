@@ -6,5 +6,6 @@ export interface IAoAppDirectoryEventBus {
     new_event: true;
     new_task: true;
     new_note: true;
+    new_absence: true;
 }
 //# sourceMappingURL=ao-app-directory.types.d.ts.map
