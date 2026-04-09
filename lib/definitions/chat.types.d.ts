@@ -1,38 +1,38 @@
-import type { UploadSource } from "asma-types";
-import type { IUsersForOrders } from "../interfaces/directory.interfaces.js";
+import type { UploadSource } from 'asma-types';
+import type { IUsersForOrders } from '../interfaces/directory.interfaces.js';
 export interface ISelectedTicket {
-  id: string;
-  title: string;
+    id: string;
+    title: string;
 }
 export interface ISelectedChatDocument {
-  file: File;
-  data: {
-    title: string;
-    extension: string;
-    forSign?: boolean;
-    docId?: string;
-    rappId?: string;
-  };
+    file: File;
+    data: {
+        title: string;
+        extension: string;
+        forSign?: boolean;
+        docId?: string;
+        rappId?: string;
+    };
 }
 export interface IOpenDocumentChatPopUp {
-  state: boolean;
+    state: boolean;
 }
 export interface IChatEventBus {
-  on_select_document: ISelectedTicket;
-  on_select_chat_document: ISelectedChatDocument | ISelectedChatDocument[];
-  on_select_new_chat_document: {
-    documents: ISelectedChatDocument | ISelectedChatDocument[];
-    source: "dialog" | "body";
-    upload_source?: UploadSource;
-  };
-  on_document_chat_popup: IOpenDocumentChatPopUp;
-  on_open_chat: {
-    open_new_chat?: boolean;
-    full_screen?: boolean;
-    patients?: IUsersForOrders[];
-    enable_full_screen?: boolean;
-    patients_readonly?: boolean;
-  };
-  test: string;
+    on_select_document: ISelectedTicket;
+    on_select_chat_document: ISelectedChatDocument | ISelectedChatDocument[];
+    on_select_new_chat_document: {
+        documents: ISelectedChatDocument | ISelectedChatDocument[];
+        source: 'dialog' | 'body';
+        upload_source?: UploadSource;
+    };
+    on_document_chat_popup: IOpenDocumentChatPopUp;
+    on_open_chat: {
+        open_new_chat?: boolean;
+        full_screen?: boolean;
+        patients?: IUsersForOrders[];
+        enable_full_screen?: boolean;
+        patients_readonly?: boolean;
+    };
+    test: string;
 }
 //# sourceMappingURL=chat.types.d.ts.map

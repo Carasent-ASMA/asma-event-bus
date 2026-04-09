@@ -30,7 +30,7 @@ export interface IChatEventBus {
     }
     on_document_chat_popup: IOpenDocumentChatPopUp
     on_open_chat: {
-        open_new_chat: boolean
+        open_new_chat?: boolean
         full_screen?: boolean
         patients?: IUsersForOrders[]
         enable_full_screen?: boolean
