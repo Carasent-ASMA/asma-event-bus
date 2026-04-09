@@ -1,4 +1,5 @@
 import type { UploadSource } from 'asma-types'
+import type { IUsersForOrders } from '../interfaces/directory.interfaces.js'
 
 export interface ISelectedTicket {
     id: string
@@ -28,6 +29,12 @@ export interface IChatEventBus {
         upload_source?: UploadSource
     }
     on_document_chat_popup: IOpenDocumentChatPopUp
-    on_open_chat: {}
+    on_open_chat: {
+        open_new_chat: boolean
+        full_screen?: boolean
+        patients?: IUsersForOrders[]
+        enable_full_screen?: boolean
+        patients_readonly?: boolean
+    }
     test: string
 }
