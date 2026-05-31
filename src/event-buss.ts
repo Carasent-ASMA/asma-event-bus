@@ -29,7 +29,7 @@ declare global {
             string,
             {
                 dispatch: (event: any, arg: any, shouldPersist?: boolean) => void
-                register: (event: any, callback: (arg: any) => void | Promise<void>) => Registry
+                register: (event: any, callback: (arg: any) => void | Promise<any>) => Registry
             }
         >
     }
@@ -81,7 +81,7 @@ export function EventBus<E>(name: EventBusNamesEnum, local_idx?: number) {
         }
     }
 
-    function register<Key extends keyof E>(event: Key, callback: (val: E[Key]) => void | Promise<void>) {
+    function register<Key extends keyof E>(event: Key, callback: (val: E[Key]) => void | Promise<any>) {
         const id = getNextId()
 
         if (!subscribers[event]) {
