@@ -23,4 +23,5 @@ export interface INavigationEventBus {
     };
     on_set_page_title: string;
 }
+export declare const PAGE_TITLE_EXTRA_SLOT_ID = "shell-page-title-extra-slot";
 //# sourceMappingURL=navigation.types.d.ts.map
