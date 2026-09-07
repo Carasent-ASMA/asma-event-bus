@@ -12,6 +12,7 @@ export interface ISelectedChatDocument {
         forSign?: boolean;
         docId?: string;
         rappId?: string;
+        templateId?: string;
     };
 }
 export interface IOpenDocumentChatPopUp {
