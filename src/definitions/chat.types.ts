@@ -13,6 +13,9 @@ export interface ISelectedChatDocument {
         forSign?: boolean
         docId?: string
         rappId?: string
+        /* ASMA-6618: OnlyOffice journal-draft source template UUID — must survive
+         * share → sign → post-journal import for the workspace document widget. */
+        templateId?: string
     }
 }
 
