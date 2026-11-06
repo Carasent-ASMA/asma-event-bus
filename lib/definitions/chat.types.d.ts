@@ -18,12 +18,13 @@ export interface ISelectedChatDocument {
 export interface IOpenDocumentChatPopUp {
     state: boolean;
 }
+export type ChatDocumentSource = 'dialog' | 'body' | 'task_chat';
 export interface IChatEventBus {
     on_select_document: ISelectedTicket;
     on_select_chat_document: ISelectedChatDocument | ISelectedChatDocument[];
     on_select_new_chat_document: {
         documents: ISelectedChatDocument | ISelectedChatDocument[];
-        source: 'dialog' | 'body';
+        source: ChatDocumentSource;
         upload_source?: UploadSource;
     };
     on_document_chat_popup: IOpenDocumentChatPopUp;
