@@ -40,3 +40,9 @@ export function t6DispatchRejectsNonStringPickerOwner(documents: ISelectedChatDo
 
 // T7: listeners read picker_owner as string | undefined
 export type T7 = Expect<Equal<RegisteredPayload['picker_owner'], string | undefined>>
+
+// T8: the payload source stays ChatDocumentSource
+export type T8 = Expect<Equal<NewChatDocumentPayload['source'], ChatDocumentSource>>
+
+// T9: listeners read source as ChatDocumentSource
+export type T9 = Expect<Equal<RegisteredPayload['source'], ChatDocumentSource>>
