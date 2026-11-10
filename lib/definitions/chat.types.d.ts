@@ -26,6 +26,7 @@ export interface IChatEventBus {
         documents: ISelectedChatDocument | ISelectedChatDocument[];
         source: ChatDocumentSource;
         upload_source?: UploadSource;
+        picker_owner?: string;
     };
     on_document_chat_popup: IOpenDocumentChatPopUp;
     on_open_chat: {
